@@ -1,10 +1,12 @@
-body {
+//seletor de elemento
+body { 
   font-family: Arial, sans-serif;
   background: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
-.video-box {
+//seletor de classe
+.video-box { 
   background: #fff;
   padding: 10px;
   border-radius: 6px;
@@ -28,3 +30,5 @@ video {
   font-size: 13px;
   color: #555;
 }
+//seletor de ID
+#teste
