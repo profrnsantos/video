@@ -16,7 +16,8 @@ header {
   border: none;
   width: 100%;
   display: flex;
-  align-items: center;      
+  align-items: center;
+  justify-content: center;
   }
     
 html, body {
@@ -54,3 +55,4 @@ video {
   font-size: 13px;
   color: #e0dfdf;
 }
+
