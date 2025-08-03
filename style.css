@@ -12,9 +12,8 @@ header {
   text-align: center;
   font-family: Arial, sans-serif;
   height: 50px;          /* altura fixa */
-  line-height: 50px;     /* centraliza o texto verticalmente */
-  margin: 0;             /* remove margens externas */
-}
+  
+  }
     
 .video-box { 
   background: #a62121;
