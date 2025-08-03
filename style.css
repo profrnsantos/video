@@ -6,6 +6,15 @@ body {
   text-align: center;
 }
 
+header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+    
 .video-box { 
   background: #a62121;
   padding: 10px;
