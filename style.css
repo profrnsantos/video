@@ -7,12 +7,14 @@ body {
 }
 
 header {
-      background-color: #000d54;
-      color: rgb(229, 255, 149);
-      text-align: center;
-      padding: 0px;
-      font-family: Arial, sans-serif;
-    }
+  background-color: #000d54;
+  color: rgb(229, 255, 149);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  height: 50px;          /* altura fixa */
+  line-height: 50px;     /* centraliza o texto verticalmente */
+  margin: 0;             /* remove margens externas */
+  border: none;          /* garante que não haja borda */
     
 .video-box { 
   background: #a62121;
