@@ -15,6 +15,9 @@ header {
   margin: 0;          
   border: none;
   width: 100%;
+  display: flex;
+  align-items: center;      /* centraliza verticalmente */
+  justify-content: center;  /* centraliza horizontalmente */
   }
     
 html, body {
