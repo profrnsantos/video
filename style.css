@@ -19,6 +19,11 @@ header {
   display: block;
   }
     
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .video-box { 
   background: #a62121;
   padding: 10px;
