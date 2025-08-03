@@ -14,7 +14,7 @@ header {
   height: 50px;          /* altura fixa */
   line-height: 50px;     /* centraliza o texto verticalmente */
   margin: 0;             /* remove margens externas */
-  border: none;          /* garante que não haja borda */
+}
     
 .video-box { 
   background: #a62121;
