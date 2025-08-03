@@ -30,11 +30,13 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .video-box { 
   background: #a62121;
   padding: 10px;
   border-radius: 6px;
-  max-width: 560px;
+  max-width: 580px;
   margin: auto;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
