@@ -5,32 +5,6 @@ body {
   padding: 20px;
   text-align: center;
 }
-
-header {
-  background-color: #2a2c39;
-  color: #BDC3C7;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  height: 100px;         
-  margin: 0;          
-  border: none;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-    
-html, body {
-  margin: 0;
-  padding: 0;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
 .video-box { 
   background: #a62121;
   padding: 10px;
@@ -56,3 +30,25 @@ video {
   color: #e0dfdf;
 }
 
+header {
+  background-color: #2a2c39;
+  color: #BDC3C7;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100px;         
+  margin: 0;          
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
