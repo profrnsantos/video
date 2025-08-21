@@ -83,10 +83,6 @@ nav ul li a:hover {
   transform: translateY(-2px); /* efeito de levantar */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-nav {
-  background: #1c1c1c;
-  padding: 12px 0;
-}
 
 #menu-temas {
   list-style: none;
@@ -116,5 +112,6 @@ nav {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
 
 
