@@ -83,4 +83,38 @@ nav ul li a:hover {
   transform: translateY(-2px); /* efeito de levantar */
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+nav {
+  background: #1c1c1c;
+  padding: 12px 0;
+}
+
+#menu-temas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;        /* quebra linha se faltar espaço */
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-temas li a {
+  text-decoration: none;
+  padding: 10px 16px;
+  background: #2d3e50;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+
+#menu-temas li a:hover {
+  background: #4a90e2;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
 
