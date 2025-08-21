@@ -26,7 +26,102 @@
       <p>Valesca Mayssa.</p>
     </div>
   </div>
+  <!-- Seletor de tema -->
+<section style="padding:12px 0;">
+  <label for="tema" style="color:#BDC3C7; margin-right:8px;">ESCOLHA O TEMA:</label>
+  <select id="tema">
+    <option value="LOUVOR">LOUVOR</option>
+    <option value="MENSAGENS">MENSAGENS</option>
+    <option value="TESTEMUNHOS">TESTEMUNHOS</option>
+    <option value="AULAS">AULAS</option>
+  </select>
+</section>
+
+<nav>
+  <ul id="menu-temas"><!-- Itens serão gerados via JS --></ul>
+</nav>
+<script>
+  // Mapa de temas → lista de vídeos (tudo em MAIÚSCULAS, sem numeração)
+  const TEMAS = {
+    LOUVOR: [
+      { titulo: "EU SOU TEU PAI", autor: "VALESCA MAYSSA", url: "https://www.youtube.com/watch?v=kNJPalON82E" },
+      { titulo: "DEUS DE PROMESSAS", autor: "DAVI SACER", url: "https://www.youtube.com/watch?v=xxxxxx" },
+      { titulo: "NINGUÉM EXPLICA DEUS", autor: "PRETO NO BRANCO", url: "https://www.youtube.com/watch?v=yyyyyy" },
+    ],
+    MENSAGENS: [
+      { titulo: "A FÉ QUE MOVE", autor: "PR. FULANO", url: "https://www.youtube.com/watch?v=aaaaaa" },
+      { titulo: "ESPERANÇA EM TEMPOS DIFÍCEIS", autor: "PR. BELTRANO", url: "https://www.youtube.com/watch?v=bbbbbb" },
+    ],
+    TESTEMUNHOS: [
+      { titulo: "TRANSFORMAÇÃO", autor: "IR. JOANA", url: "https://www.youtube.com/watch?v=cccccc" },
+      { titulo: "CURADO PELO SENHOR", autor: "IR. PAULO", url: "https://www.youtube.com/watch?v=dddddd" },
+    ],
+    AULAS: [
+      { titulo: "HTML E CSS BÁSICO", autor: "PROF. ROBERTO", url: "https://www.youtube.com/watch?v=eeeeee" },
+      { titulo: "INTRODUÇÃO A JAVASCRIPT", autor: "PROF. ROBERTO", url: "https://www.youtube.com/watch?v=ffffff" },
+    ],
+  };
+
+  // Seletores
+  const selectTema = document.getElementById("tema");
+  const menuUl = document.getElementById("menu-temas");
+  const iframe = document.querySelector(".video-box iframe");
+  const infoTitulo = document.querySelector(".info h3");
+  const infoAutor = document.querySelector(".info p");
+
+  // Converte URL normal do YouTube para /embed
+  function toEmbed(url) {
+    try {
+      const u = new URL(url);
+      const id = u.searchParams.get("v");
+      if (id) return `https://www.youtube.com/embed/${id}`;
+      // se já for /embed/ ou youtu.be
+      if (u.hostname.includes("youtu.be")) return `https://www.youtube.com/embed/${u.pathname.slice(1)}`;
+      return url;
+    } catch {
+      return url;
+    }
+  }
+
+  // Renderiza os botões do menu com base no tema
+  function renderMenu(tema) {
+    const lista = TEMAS[tema] || [];
+    menuUl.innerHTML = ""; // limpa
+
+    lista.forEach((video) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+
+      a.href = "#";
+      a.textContent = video.titulo.toUpperCase(); // mantém MAIÚSCULO
+      a.setAttribute("role", "button");
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        trocarVideo(video);
+      });
+
+      li.appendChild(a);
+      menuUl.appendChild(li);
+    });
+
+    // Se existir pelo menos um vídeo, já carrega o primeiro
+    if (lista.length) trocarVideo(lista[0]);
+  }
+
+  // Troca o vídeo no iframe e as infos de título/autor
+  function trocarVideo(video) {
+    iframe.src = toEmbed(video.url);
+    infoTitulo.textContent = video.titulo.toUpperCase();
+    infoAutor.textContent = `${video.autor.toUpperCase()}.`;
+  }
+
+  // Inicialização
+  renderMenu(selectTema.value);
+  selectTema.addEventListener("change", () => renderMenu(selectTema.value));
+</script>
+
   </body>
 
 </html>
+
 
