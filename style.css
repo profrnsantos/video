@@ -52,23 +52,15 @@ html, body {
   box-sizing: border-box;
 }
 /*INÍCIO DO MENU*/
-nav {
-  background: #1c1c1c;  
-  padding: 12px 0;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;          /* permite quebrar em várias linhas */
-  justify-content: center;  /* centraliza os botões */
-  gap: 0;                   /* sem espaço lateral entre botões */
+  justify-content: center;
+  gap: 0;                   /* sem espaço lateral */
+  row-gap: 8px;             /* espaço só entre linhas */
   margin: 0;
   padding: 0;
-}
-
-nav ul li {
-  margin-bottom: 6px;       /* espaço entre linhas */
 }
 
 nav ul li a {
@@ -77,9 +69,11 @@ nav ul li a {
   background: transparent;
   color: #f0f0f0;
   font-weight: bold;
-  border: 1px solid #d3d3d3; /* linha discreta em cinza claro */
-  border-radius: 0;          /* deixa quadrado para parecer tabela */
+  border: 1px solid #d3d3d3; /* borda em cinza claro */
+  border-radius: 0;
   transition: all 0.25s ease;
+  display: inline-block;
+  line-height: 1.4;          /* garante altura confortável */
 }
 
 nav ul li a:hover {
@@ -87,6 +81,7 @@ nav ul li a:hover {
   color: #fff;
   border-color: #4a90e2;
 }
+
 
 #menu-temas {
   list-style: none;
@@ -116,6 +111,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
 
 
 
