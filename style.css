@@ -58,7 +58,7 @@ nav ul {
   flex-wrap: wrap;          /* permite quebrar em várias linhas */
   justify-content: center;
   gap: 0;                   /* sem espaço lateral */
-  row-gap: 8px;             /* espaço só entre linhas */
+  row-gap: 2px;             /* espaço só entre linhas */
   margin: 0;
   padding: 0;
 }
@@ -111,6 +111,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
 
 
 
