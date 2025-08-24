@@ -51,36 +51,37 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
+/*INÍCIO DO MENU*/
 nav {
-  background: #1c1c1c;  /* cor de fundo da barra */
+  background: #1c1c1c;  
   padding: 12px 0;
 }
 
 nav ul {
-  list-style: none;   /* remove bolinhas */
-  display: flex;      /* coloca lado a lado */
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 15px;          /* espaço entre os botões */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;          /* permite quebrar em várias linhas */
+  justify-content: center;  /* centraliza os botões */
+  gap: 10px;                /* espaçamento entre eles */
   margin: 0;
   padding: 0;
 }
 
 nav ul li a {
-  text-decoration: none; /* remove sublinhado */
+  text-decoration: none;
   padding: 10px 18px;
-  background: #2d3e50;  /* cor de fundo suave */
-  color: #f0f0f0;       /* cor do texto */
+  background: transparent;  /* fundo plano */
+  color: #f0f0f0;           /* texto claro */
   font-weight: bold;
-  border-radius: 8px;   /* cantos arredondados */
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  border: 2px solid #2d3e50; /* borda para dar contraste */
+  border-radius: 6px;
+  transition: all 0.25s ease;
 }
 
 nav ul li a:hover {
-  background: #4a90e2;  /* muda a cor ao passar o mouse */
-  color: #ffffff;
-  transform: translateY(-2px); /* efeito de levantar */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  background: #4a90e2;   /* muda cor do fundo */
+  color: #fff;           /* texto branco */
+  border-color: #4a90e2; /* borda acompanha a cor */
 }
 
 #menu-temas {
@@ -111,6 +112,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
 
 
 
