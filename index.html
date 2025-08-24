@@ -1,8 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Vídeo</title>
+  <title>ROBERTO-TELEFLIX</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -10,9 +11,9 @@
     <h1>ROBERTO-TELEFLIX</h1>
   </header>
 
-  <!-- LADO A LADO: MENU (ESQ) + VÍDEO (DIR) -->
+  <!-- LAYOUT: MENU LATERAL (ESQ) + VÍDEO (DIR) -->
   <div class="layout">
-    <!-- COLUNA ESQUERDA: seletor + menu -->
+    <!-- LATERAL ESQUERDA -->
     <aside class="sidebar">
       <!-- Seletor de tema -->
       <section style="padding:12px 0;">
@@ -25,13 +26,24 @@
         </select>
       </section>
 
-      <!-- Menu vertical gerado via JS -->
+      <!-- Menu dinâmico gerado via JS -->
       <nav class="nav-vertical" aria-label="Lista de vídeos do tema">
         <ul id="menu-temas"><!-- Itens gerados via JS --></ul>
       </nav>
+
+      <!-- Menu fixo adicional -->
+      <nav class="nav-vertical" aria-label="Vídeos fixos">
+        <ul>
+          <li><a href="https://youtu.be/cgEnBkmcpuQ?si=paA3pkAIp3lgAmjQ" target="_blank">CantaJuego - Soy Una Taza (Version Mexico)</a></li>
+          <li><a href="https://youtu.be/zWW6PUom-8o?si=IdhsyI372HIguMJY" target="_blank">Morar no Sertão - Nem Que A Vaca Tussa</a></li>
+          <li><a href="https://youtu.be/RSXJEkzws2o?si=krxwF-8-ZuPxLo8K" target="_blank">Eu me remecho muito - Madagascar</a></li>
+          <li><a href="https://youtu.be/orxxp-3gBiE?si=oViIQTT_iWpsrC8l" target="_blank">Mariana - Galinha Pintadinha</a></li>
+          <li><a href="https://youtu.be/Tdwy3BZe61s?si=As38T49IC695wKE0" target="_blank">Pedro, Tiago, João no barquinho - 3 Palavrinhas</a></li>
+        </ul>
+      </nav>
     </aside>
 
-    <!-- COLUNA DIREITA: player -->
+    <!-- PLAYER À DIREITA -->
     <main class="player">
       <div class="video-box">
         <iframe
@@ -54,7 +66,7 @@
 
   <!-- JavaScript -->
   <script>
-    // Mapa de temas → lista de vídeos (MAIÚSCULAS, sem numeração)
+    // Mapa de temas → lista de vídeos
     const TEMAS = {
       LOUVOR: [
         { titulo: "EU SOU TEU PAI", autor: "VALESCA MAYSSA", url: "https://www.youtube.com/watch?v=kNJPalON82E" },
@@ -76,11 +88,11 @@
     };
 
     // Seletores
-    const selectTema   = document.getElementById("tema");
-    const menuUl       = document.getElementById("menu-temas");
-    const iframe       = document.querySelector(".video-box iframe");
-    const infoTitulo   = document.querySelector(".info h3");
-    const infoAutor    = document.querySelector(".info p");
+    const selectTema = document.getElementById("tema");
+    const menuUl     = document.getElementById("menu-temas");
+    const iframeEl   = document.querySelector(".video-box iframe");
+    const infoTitulo = document.querySelector(".info h3");
+    const infoAutor  = document.querySelector(".info p");
 
     // Converte URL normal do YouTube para /embed
     function toEmbed(url) {
@@ -114,13 +126,12 @@
         menuUl.appendChild(li);
       });
 
-      // Carrega o primeiro vídeo do tema automaticamente
       if (lista.length) trocarVideo(lista[0]);
     }
 
     // Troca o vídeo e informações
     function trocarVideo(video) {
-      iframe.src = toEmbed(video.url);
+      iframeEl.src = toEmbed(video.url);
       infoTitulo.textContent = video.titulo.toUpperCase();
       infoAutor.textContent  = `${video.autor.toUpperCase()}.`;
     }
@@ -131,3 +142,4 @@
   </script>
 </body>
 </html>
+```
