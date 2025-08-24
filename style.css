@@ -1,12 +1,4 @@
 /* ======= BASE ======= */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-* {
-  box-sizing: border-box;
-}
-
 body { 
   font-family: Arial, sans-serif;
   background: #0f0f0f;
@@ -39,6 +31,7 @@ header {
   position: sticky;              /* opcional: gruda ao rolar */
   top: 8px;
   text-align: left;              /* rótulos/menus alinhados à esquerda */
+  margin-left: 20px;        /* espaço na lateral esquerda */
 }
 
 /* coluna direita (player) */
