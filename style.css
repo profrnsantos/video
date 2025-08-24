@@ -37,6 +37,15 @@ header {
   margin-left: 20px;        /* espaço na lateral esquerda */
 }
 
+/* versão compacta */
+.sidebar.compacto #tema{
+  height: 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0 40px 0 12px;
+}
+
+
 /* coluna direita (player) */
 .player{
   flex: 1 1 auto;
@@ -140,4 +149,5 @@ html, body {
     max-width: 100%;
   }
 }
+
 
