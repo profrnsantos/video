@@ -58,7 +58,7 @@ nav ul {
   flex-wrap: wrap;          /* permite quebrar em várias linhas */
   justify-content: center;
   gap: 0;                   /* sem espaço lateral */
-  row-gap: 2px;             /* espaço só entre linhas */
+  row-gap: 0px;             /* espaço só entre linhas */
   margin: 0;
   padding: 0;
 }
